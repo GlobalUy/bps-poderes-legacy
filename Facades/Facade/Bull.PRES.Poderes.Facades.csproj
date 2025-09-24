@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{625E1FD2-07E8-4AFE-A9E3-BAAF645C83A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bull.PRES.Poderes.Facades</RootNamespace>
+    <AssemblyName>Bull.PRES.Poderes.Facades</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>R:\bull.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bull.ApplicationFramework, Version=2.1.0.0, Culture=neutral, PublicKeyToken=1d971450e3c8ea08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>R:\Bull.ApplicationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Bull.Seguridad.BusinessEntity, Version=2.1.0.0, Culture=neutral, PublicKeyToken=1d971450e3c8ea08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>R:\Bull.Seguridad.BusinessEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="Bull.Comunes, Version=2.1.0.0, Culture=neutral, PublicKeyToken=1d971450e3c8ea08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>R:\Bull.Comunes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatoPersona.cs" />
+    <Compile Include="DCApoderado.cs" />
+    <Compile Include="DCErrorNegocio.cs" />
+    <Compile Include="DCPersona.cs" />
+    <Compile Include="DCResultConsPoder.cs" />
+    <Compile Include="Documento.cs" />
+    <Compile Include="ErrorNegocio.cs" />
+    <Compile Include="GestionPoderes\BusinessFacade.cs" />
+    <Compile Include="GestionPoderes\ErrorNegocio.cs" />
+    <Compile Include="GestionPoderes\IServiceFacade.cs" />
+    <Compile Include="GestionPoderes\ParamIngresarPoder.cs" />
+    <Compile Include="GestionPoderes\Resultado.cs" />
+    <Compile Include="GestionPoderes\ResultIngresarPoder.cs" />
+    <Compile Include="GestionPoderes\ServiceFacade.cs" />
+    <Compile Include="IServiceFacade.cs" />
+    <Compile Include="ISistemaPoderes.cs" />
+    <Compile Include="ParamVersion.cs" />
+    <Compile Include="ResultPoderPersonaControlCant.cs" />
+    <Compile Include="ResultVersion.cs" />
+    <Compile Include="wsFuncionario\Documento.cs" />
+    <Compile Include="wsFuncionario\ErroresNegocio.cs" />
+    <Compile Include="wsFuncionario\Funcionario.cs" />
+    <Compile Include="wsFuncionario\IdentificadorFuncionario.cs" />
+    <Compile Include="wsFuncionario\ResultObtenerFuncionarios.cs" />
+    <Compile Include="ParamObtenerApoderadosYPoderdantes.cs" />
+    <Compile Include="ParamObtHabilitacionCobro.cs" />
+    <Compile Include="ParamObtHabilitacionCobroSinApo.cs" />
+    <Compile Include="ParamObtListaPoderes.cs" />
+    <Compile Include="ParamObtTienePoder.cs" />
+    <Compile Include="PoderPersona.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultObtenerApoderadosYPoderdantes.cs" />
+    <Compile Include="ResultObtHabilitacionCobro.cs" />
+    <Compile Include="ResultObtHabilitacionCobroSinApo.cs" />
+    <Compile Include="ResultObtListaPoderes.cs" />
+    <Compile Include="ResultObtTienePoder.cs" />
+    <Compile Include="ServiceFacade.cs" />
+    <Compile Include="SistemaPoderes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="R:\bull.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessEntities\Bull.PRES.Poderes.BusinessEntities.csproj">
+      <Project>{ee3c76de-adb8-4736-8cb3-7b4fd8b8bd96}</Project>
+      <Name>Bull.PRES.Poderes.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessLogic\AdmApoderados\Bull.PRES.Poderes.BusinessLogic.AdmApoderados.csproj">
+      <Project>{79485d57-fa01-4a03-aae1-28c48e9eb402}</Project>
+      <Name>Bull.PRES.Poderes.BusinessLogic.AdmApoderados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessLogic\AdmGestionPoderes\Bull.PRES.Poderes.BusinessLogic.AdmGestionPoderes.csproj">
+      <Project>{10dcf48c-ece8-402d-b02f-f03e6c285117}</Project>
+      <Name>Bull.PRES.Poderes.BusinessLogic.AdmGestionPoderes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessLogic\AdmPoderes\Bull.PRES.Poderes.BusinessLogic.AdmPoderes.csproj">
+      <Project>{9B878BF9-CB97-4B2E-8F77-2B9F938CF60A}</Project>
+      <Name>Bull.PRES.Poderes.BusinessLogic.AdmPoderes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceAgents\SAPoderes\Bull.PRES.Poderes.ServiceAgents.SAPoderes.csproj">
+      <Project>{1597A548-A2AD-4226-A9A1-91EC0F0EFACA}</Project>
+      <Name>Bull.PRES.Poderes.ServiceAgents.SAPoderes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,57 @@
+<Bull.PRES.Poderes.Mappers.MapPoderes>
+  <Class name="MapPoderes">
+    <Method name="ObtApoderadosAFAM(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbAutCobroAFAM" className="DbAutCobroAFAM" methodName="ObtApoderado(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtApoderados(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbApoderados" className="DbApoderados" methodName="ObtApoderados(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtApoderadoIns(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbInstBeneficiarios" className="DbInstBeneficiarios" methodName="ObtApoderado(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtListaApoderadoIns(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbInstBeneficiarios" className="DbInstBeneficiarios" methodName="ObtApoderado(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtListaApoderados(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbApoderados" className="DbApoderados" methodName="ObtApoderados(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtTipoPoderes(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbComunes" className="DbComunes" methodName="ObtTipoPoderes(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtTipoFacultades(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbComunes" className="DbComunes" methodName="ObtTipocFacultades(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtListaApoderadosAFAM(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbAutCobroAFAM" className="DbAutCobroAFAM" methodName="ObtApoderado(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="MapObtenerApoderadosYPoderdantes(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbApoderados" className="DbApoderados" methodName="DbObtenerApoderadosYPoderdantes(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="MapObtenerPoderesApoderado(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.Dalcs.DbApoderados" className="DbApoderados" methodName="DbObtenerPoderesApoderado(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name=".ctor(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies />
+    </Method>
+  </Class>
+</Bull.PRES.Poderes.Mappers.MapPoderes>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23C3A848-F8EE-4200-B439-680928A7BFCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bull.PRES.Poderes.ServiceWF</RootNamespace>
+    <AssemblyName>Bull.PRES.Poderes.ServiceWF</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>bull.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bull.ApplicationFramework, Version=2.1.0.0, Culture=neutral, PublicKeyToken=1d971450e3c8ea08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>R:\Bull.ApplicationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Bull.Seguridad.BusinessEntity, Version=2.0.0.0, Culture=neutral, PublicKeyToken=1d971450e3c8ea08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>R:\Bull.Seguridad.BusinessEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Workflow.Activities">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.ComponentModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.Runtime">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.WorkflowServices">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ContextoServicio.cs" />
+    <Compile Include="Entities\DatoPersona.cs" />
+    <Compile Include="Entities\DocumentoPersona.cs" />
+    <Compile Include="Entities\ErrorNegocio.cs" />
+    <Compile Include="Entities\ParamObtHabilitacionCobro.cs" />
+    <Compile Include="Entities\ParamObtHabilitacionCobroSinApo.cs" />
+    <Compile Include="Entities\ResultObtHabilitacionCobro.cs" />
+    <Compile Include="Entities\ResultObtHabilitacionCobroSinApo.cs" />
+    <Compile Include="IServiceFacade.cs" />
+    <Compile Include="ObtHabilitacionCobroSinApo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObtHabilitacionCobroSinApo.Designer.cs">
+      <DependentUpon>ObtHabilitacionCobroSinApo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="App.config" />
+    <Compile Include="ObtHabilitacionCobro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObtHabilitacionCobro.Designer.cs">
+      <DependentUpon>ObtHabilitacionCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SReferencePersonas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SReferencePoderes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SReferencePersonas\" />
+    <WCFMetadataStorage Include="Service References\SReferencePoderes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SReferencePoderes\Poderes.wsdl" />
+    <None Include="Service References\SReferencePoderes\Poderes2.xsd" />
+    <None Include="Service References\SReferencePoderes\SistemaPoderes.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SReferencePoderes\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bull.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SReferencePoderes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ObtHabilitacionCobro.resx">
+      <DependentUpon>ObtHabilitacionCobro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObtHabilitacionCobro.rules">
+      <DependentUpon>ObtHabilitacionCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObtHabilitacionCobroSinApo.rules">
+      <DependentUpon>ObtHabilitacionCobroSinApo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SReferencePersonas\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SReferencePersonas\Bull.PRES.Poderes.ServiceWF.SReferencePersonas.ResultObtPersonaPorDocumento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SReferencePersonas\Personas.wsdl" />
+    <None Include="Service References\SReferencePersonas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SReferencePoderes\Bull.PRES.Poderes.ServiceWF.SReferencePoderes.ResultObtTienePoder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SReferencePoderes\Poderes.xsd" />
+    <None Include="Service References\SReferencePoderes\Poderes1.xsd" />
+    <None Include="Service References\SReferencePoderes\Poderes3.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(MSBuildToolsPath)\Workflow.Targets" />
+</Project>

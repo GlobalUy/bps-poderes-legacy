@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a0a62fb-471a-49ca-9771-30ccc3479edf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bulldesa11:8500/Poderes.Facades?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Poderes3.xsd" MetadataType="Schema" ID="b52a1749-c74e-4290-8abc-18ac16a89a68" SourceId="1" SourceUrl="http://bulldesa11:8500/Poderes.Facades?xsd=xsd3" />
+    <MetadataFile FileName="Poderes.xsd" MetadataType="Schema" ID="33739848-b6fa-4053-b029-563d342bcc0b" SourceId="1" SourceUrl="http://bulldesa11:8500/Poderes.Facades?xsd=xsd2" />
+    <MetadataFile FileName="Poderes1.xsd" MetadataType="Schema" ID="46d2dd0b-6cd3-4ea1-a01a-52af72a24702" SourceId="1" SourceUrl="http://bulldesa11:8500/Poderes.Facades?xsd=xsd1" />
+    <MetadataFile FileName="SistemaPoderes.wsdl" MetadataType="Wsdl" ID="84105a70-ff8d-4b9c-ab1c-2c7e5920c1cb" SourceId="1" SourceUrl="http://bulldesa11:8500/Poderes.Facades?wsdl" />
+    <MetadataFile FileName="Poderes2.xsd" MetadataType="Schema" ID="2e6783a5-e82b-4da5-8554-cba85f2e4543" SourceId="1" SourceUrl="http://bulldesa11:8500/Poderes.Facades?xsd=xsd0" />
+    <MetadataFile FileName="Poderes.wsdl" MetadataType="Wsdl" ID="97029bb4-b11b-47e7-b413-dbd5d3c185ac" SourceId="1" SourceUrl="http://bulldesa11:8500/Poderes.Facades?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

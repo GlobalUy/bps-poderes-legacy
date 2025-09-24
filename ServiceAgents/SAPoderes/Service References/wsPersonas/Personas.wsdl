@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://bps.gub.uy/Personas/wsPersonas" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://bps.gub.uy/Personas/wsPersonas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://bps.gub.uy/Personas/wsPersonas/v001" elementFormDefault="qualified" targetNamespace="http://bps.gub.uy/Personas/wsPersonas/v001" xmlns:s="http://www.w3.org/2001/XMLSchema">
+      <s:element name="obtPersonaPorDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramObtPersonaPorDocumento" type="s0:ParamObtPersonaPorDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParamObtPersonaPorDocumento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodPaisEmisor" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NroDocumento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="obtPersonaPorDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtPersonaPorDocumentoResult" type="s0:ResultObtPersonaPorDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultObtPersonaPorDocumento">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:ResultObtPersona" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ResultObtPersona">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjPersona" type="s0:ObjPersona" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObjPersona">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodPaisEmisor" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodTipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NroDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PersIdentificador" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sexo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodNacionalidad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerieCC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NroCC" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AutoGenerado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodOpcionRegimen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescOpcionRegimen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFallecimiento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodCausalFallecimiento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescCodCausalFallecimiento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaComunicacion" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Acta" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OficinaJuridica" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeptoOficinaJuridica" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodAgencia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fact" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescCodPaisEmisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescSexo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescCodNacionalidad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodPaisFallecimiento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescCodPaisFallecimiento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="obtPersonaPorPersId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramObtPersonaPorPersId" type="s0:ParamObtPersonaPorPersId" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParamObtPersonaPorPersId">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PersId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="obtPersonaPorPersIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtPersonaPorPersIdResult" type="s0:ResultObtPersonaPorPersId" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultObtPersonaPorPersId">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:ResultObtPersona" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfErrorNegocio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorNegocio" nillable="true" type="s0:ErrorNegocio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorNegocio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Severidad" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntradaPersonaPorDocumento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodPaisEmisor" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NroDocumento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultObtListaPersonaPorDocumento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ColResultados" type="s0:ArrayOfPersonaError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPersonaError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonaError" nillable="true" type="s0:PersonaError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonaError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Persona" type="s0:Persona" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColErrorNegocio" type="s0:ArrayOfErrorNegocio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Persona">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PersIdentificador" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodSexo" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtDatosPersona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramObtDatosPersona" type="s0:ParamObtDatosPersona" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParamObtDatosPersona">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodPaisEmisor" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NroDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CtxWS" type="s0:ContextoWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContextoWS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UsuarioActual" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaOpera" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Debug" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodSistemaCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodAgencia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodRol" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NroSesion" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosPersona">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PersIdentificador" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntradaPersonaPorFechaNacimiento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FechaDesde" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaHasta" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtListaPersonaPorDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramObtListaPersonaPorDocumento" type="s0:ParamObtListaPersonaPorDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParamObtListaPersonaPorDocumento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Datos" type="s0:ArrayOfEntradaPersonaPorDocumento" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contexto" type="s0:ContextoWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntradaPersonaPorDocumento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntradaPersonaPorDocumento" nillable="true" type="s0:EntradaPersonaPorDocumento" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtListaPersonaPorFechaNacimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtListaPersonaPorFechaNacimientoResult" type="s0:ResultObtListaPersonaPorFechaNacimiento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultObtListaPersonaPorFechaNacimiento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ColResultados" type="s0:ArrayOfPersonaExtendidaError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPersonaExtendidaError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonaExtendidaError" nillable="true" type="s0:PersonaExtendidaError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonaExtendidaError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ColPersona" type="s0:ArrayOfPersonaExtendida" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColErrorNegocio" type="s0:ArrayOfErrorNegocio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPersonaExtendida">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonaExtendida" nillable="true" type="s0:PersonaExtendida" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonaExtendida">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Persona">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Acta" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="AutoGenerado" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodAgencia" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodCausalFallecimiento" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodNacionalidad" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodOpcionRegimen" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodPaisEmisor" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodPaisFallecimiento" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodTipoDocumento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DeptoOficinaJuridica" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DescCodCausalFallecimiento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DescCodNacionalidad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DescCodPaisEmisor" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DescCodPaisFallecimiento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DescOpcionRegimen" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DescSexo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Fact" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaComunicacion" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaFallecimiento" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="NroCC" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="NroDocumento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="OficinaJuridica" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="SerieCC" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ResultObtDatosPersona">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ColErrorNegocio" type="s0:ArrayOfErrorNegocio" />
+          <s:element minOccurs="0" maxOccurs="1" name="DatosPersona" type="s0:DatosPersona" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntradaPersonaPorFechaNacimiento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntradaPersonaPorFechaNacimiento" nillable="true" type="s0:EntradaPersonaPorFechaNacimiento" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtListaPersonaPorFechaNacimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramObtListaPersonaPorFechaNacimiento" type="s0:ParamObtListaPersonaPorFechaNacimiento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParamObtListaPersonaPorFechaNacimiento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Datos" type="s0:ArrayOfEntradaPersonaPorFechaNacimiento" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contexto" type="s0:ContextoWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtListaPersonaPorDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtListaPersonaPorDocumentoResult" type="s0:ResultObtListaPersonaPorDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtDatosPersonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtDatosPersonaResult" type="s0:ResultObtDatosPersona" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="obtPersonaPorDocumentoSoapIn">
+    <wsdl:part xmlns:q1="http://bps.gub.uy/Personas/wsPersonas/v001" name="parameters" element="q1:obtPersonaPorDocumento" />
+  </wsdl:message>
+  <wsdl:message name="obtPersonaPorDocumentoSoapOut">
+    <wsdl:part xmlns:q2="http://bps.gub.uy/Personas/wsPersonas/v001" name="parameters" element="q2:obtPersonaPorDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtPersonaPorPersIdSoapIn">
+    <wsdl:part xmlns:q3="http://bps.gub.uy/Personas/wsPersonas/v001" name="parameters" element="q3:obtPersonaPorPersId" />
+  </wsdl:message>
+  <wsdl:message name="obtPersonaPorPersIdSoapOut">
+    <wsdl:part xmlns:q4="http://bps.gub.uy/Personas/wsPersonas/v001" name="parameters" element="q4:obtPersonaPorPersIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsPersonas">
+    <wsdl:operation name="obtPersonaPorDocumento">
+      <wsdl:input message="tns:obtPersonaPorDocumentoSoapIn" />
+      <wsdl:output message="tns:obtPersonaPorDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtPersonaPorPersId">
+      <wsdl:input message="tns:obtPersonaPorPersIdSoapIn" />
+      <wsdl:output message="tns:obtPersonaPorPersIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_wsPersonas" type="tns:wsPersonas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtPersonaPorDocumento">
+      <soap:operation soapAction="obtPersonaPorDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtPersonaPorPersId">
+      <soap:operation soapAction="obtPersonaPorPersId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port name="BasicHttpBinding_wsPersonas" binding="tns:BasicHttpBinding_wsPersonas">
+      <soap:address location="http://bulldesabts01:8001/Personas" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

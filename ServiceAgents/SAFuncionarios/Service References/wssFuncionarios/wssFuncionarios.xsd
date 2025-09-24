@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bps.gub.uy/Personal/wssFuncionarios/v1" elementFormDefault="qualified" targetNamespace="http://bps.gub.uy/Personal/wssFuncionarios/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="version" type="tns:version" />
+  <xs:complexType name="version" />
+  <xs:element name="ResultVersion" type="tns:ResultVersion" />
+  <xs:complexType name="ResultVersion">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="nombreServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="versionServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fechaExpiracion" nillable="true" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="versionEstandar" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="obtenerEgresadosPeriodo" type="tns:ParamObtenerEgresadosPeriodo" />
+  <xs:complexType name="ParamObtenerEgresadosPeriodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="fechaDesde" nillable="true" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fechaHasta" nillable="true" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultObtenerEgresadosPeriodo" type="tns:ResultObtenerEgresadosPeriodo" />
+  <xs:complexType name="ResultObtenerEgresadosPeriodo">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="funcionariosEgresados" nillable="true" type="tns:ArrayOfFuncionario" />
+      <xs:element minOccurs="1" maxOccurs="1" name="erroresNegocio" nillable="true" type="tns:ArrayOfErrorNegocio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfFuncionario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="funcionario" nillable="true" type="tns:Funcionario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Funcionario">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="nroFuncionario" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="nombre1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="nombre2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="apellido1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="apellido2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="usuarioRed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="codPaisEmisor" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="paisEmisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="nroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="codSexo" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="sexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="fechaNacimiento" nillable="true" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="fechaIngreso" nillable="true" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="codRelacionFuncional" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="relacionFuncional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="codUnidad" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="unidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="codLugarFisico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="lugarFisico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="escalafonPresupuestal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="gradoPresupuestal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="cargoPresupuestal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="escalafonCobro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="gradoCobro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="cargoCobro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="eMailExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="numeroCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="serieCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="antiguedad" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="causalEgreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fechaEgreso" nillable="true" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fechaFinRelacionFuncional" nillable="true" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fechaVencimientoCarnetSalud" nillable="true" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfErrorNegocio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="errorNegocio" nillable="true" type="tns:ErrorNegocio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ErrorNegocio">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="detalle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="obtenerFuncionarios" type="tns:ParamObtenerFuncionarios" />
+  <xs:complexType name="ParamObtenerFuncionarios">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="identificadoresFuncionarios" nillable="true" type="tns:ArrayOfIdentificadorFuncionario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfIdentificadorFuncionario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="identificadorFuncionario" nillable="true" type="tns:IdentificadorFuncionario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IdentificadorFuncionario">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="nroFuncionario" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documento" nillable="true" type="tns:Documento" />
+      <xs:element minOccurs="1" maxOccurs="1" name="usuarioRed" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Documento">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="codPaisEmisor" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="nroDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultObtenerFuncionarios" type="tns:ResultObtenerFuncionarios" />
+  <xs:complexType name="ResultObtenerFuncionarios">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="funcionarios" nillable="true" type="tns:ArrayOfItemFuncionario" />
+      <xs:element minOccurs="1" maxOccurs="1" name="erroresNegocio" nillable="true" type="tns:ArrayOfErrorNegocio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfItemFuncionario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="itemFuncionario" nillable="true" type="tns:ItemFuncionario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemFuncionario">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="identificadorFuncionario" nillable="true" type="tns:IdentificadorFuncionario" />
+      <xs:element minOccurs="1" maxOccurs="1" name="funcionario" nillable="true" type="tns:Funcionario" />
+      <xs:element minOccurs="1" maxOccurs="1" name="erroresNegocio" nillable="true" type="tns:ArrayOfErrorNegocio" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

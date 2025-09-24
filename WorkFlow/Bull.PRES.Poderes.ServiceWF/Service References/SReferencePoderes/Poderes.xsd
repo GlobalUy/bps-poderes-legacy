@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bps.gub.uy/Prestaciones/wsPoderes/v001" elementFormDefault="qualified" targetNamespace="http://bps.gub.uy/Prestaciones/wsPoderes/v001" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bulldesa11:8500/Poderes.Facades?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Bull.ApplicationFramework.WebServices" />
+  <xs:complexType name="ParamObtTienePoder">
+    <xs:sequence>
+      <xs:element name="PersIdentificadorPoderDante" type="xs:int" />
+      <xs:element name="PersIdentificadorApoderado" nillable="true" type="xs:int" />
+      <xs:element name="CodGrupo" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Bull.ApplicationFramework.WebServices" name="CtxWS" nillable="true" type="q1:ContextoWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamObtTienePoder" nillable="true" type="tns:ParamObtTienePoder" />
+  <xs:complexType name="ResultObtTienePoder">
+    <xs:sequence>
+      <xs:element name="Resultado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultObtTienePoder" nillable="true" type="tns:ResultObtTienePoder" />
+</xs:schema>

@@ -1,0 +1,32 @@
+<Bull.PRES.Poderes.ServiceAgents.SAPoderes>
+  <Class name="SAPoderes">
+    <Method name=".ctor(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies />
+    </Method>
+    <Method name="ObtParamBenef(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Comunes.Facades.Facade" className="Facade" methodName="ObtParametrosGrales(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtenerPersonaPorDocumento(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.ServiceAgents.SAPoderes" className="wsPersonas" methodName="obtPersonaPorDocumento(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtDatosPersonaPorPersID(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.PRES.Poderes.ServiceAgents.SAPoderes" className="wsPersonas" methodName="obtPersonaPorPersId(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ExisteUsuario(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.SeguridadCorporativa.Facades" className="BusinessFacade" methodName="ObtUsuarios(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+    <Method name="ObtenerDatosPersonaPorPersID(Microsoft.FxCop.Sdk.ParameterCollection)">
+      <Dependencies>
+        <Dependency projectName="Bull.RCOR.Persona.Facades" className="IExternalFacade" methodName="ObtPersonaPorDocumento(Microsoft.FxCop.Sdk.ParameterCollection)" />
+      </Dependencies>
+    </Method>
+  </Class>
+</Bull.PRES.Poderes.ServiceAgents.SAPoderes>

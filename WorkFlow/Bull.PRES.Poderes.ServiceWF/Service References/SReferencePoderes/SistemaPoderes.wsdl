@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://bps.gub.uy/Prestaciones/Poderes/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="ServicioPoderes" targetNamespace="http://bps.gub.uy/Prestaciones/Poderes/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://bulldesa11:8500/Poderes.Facades?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://bps.gub.uy/Prestaciones/Poderes/Imports">
+      <xsd:import schemaLocation="http://bulldesa11:8500/Poderes.Facades?xsd=xsd0" namespace="http://bps.gub.uy/Prestaciones/Poderes/" />
+      <xsd:import schemaLocation="http://bulldesa11:8500/Poderes.Facades?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bulldesa11:8500/Poderes.Facades?xsd=xsd2" namespace="http://bps.gub.uy/Prestaciones/wsPoderes/v001" />
+      <xsd:import schemaLocation="http://bulldesa11:8500/Poderes.Facades?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Bull.ApplicationFramework.WebServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ServicioPoderes_ObtTienePoder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtTienePoder" />
+  </wsdl:message>
+  <wsdl:message name="ServicioPoderes_ObtTienePoder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtTienePoderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioPoderes">
+    <wsdl:operation name="ObtTienePoder">
+      <wsdl:input wsaw:Action="http://bps.gub.uy/Prestaciones/Poderes/ServicioPoderes/ObtTienePoder" message="tns:ServicioPoderes_ObtTienePoder_InputMessage" />
+      <wsdl:output wsaw:Action="http://bps.gub.uy/Prestaciones/Poderes/ServicioPoderes/ObtTienePoderResponse" message="tns:ServicioPoderes_ObtTienePoder_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ServicioPoderes">
+    <wsdl:port name="NetTcpBinding_ServicioPoderes" binding="i0:NetTcpBinding_ServicioPoderes">
+      <soap12:address location="net.tcp://bulldesa11:8502/Poderes.Facades" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://bulldesa11:8502/Poderes.Facades</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>ecarballido@dompres.net</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

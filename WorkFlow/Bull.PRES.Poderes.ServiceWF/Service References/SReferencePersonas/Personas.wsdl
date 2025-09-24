@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://bps.gub.uy/RegistrosCorporativos/Persona" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://bps.gub.uy/RegistrosCorporativos/Persona" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:s0="http://bps.gub.uy/RegistrosCorporativos/Persona" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" elementFormDefault="qualified" targetNamespace="http://bps.gub.uy/RegistrosCorporativos/Persona" xmlns:s="http://www.w3.org/2001/XMLSchema">
+      <s:element name="ObtPersonaPorDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="codPaisEmisor" type="s:int" />
+            <s:element minOccurs="0" name="codTipoDocumento" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="nroDocumento" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="contexto" nillable="true" type="s0:ContextoServicio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ContextoServicio">
+        <s:sequence>
+          <s:element name="Agencia" type="s:int" />
+          <s:element name="CodRol" nillable="true" type="s:int" />
+          <s:element name="Debug" type="s:int" />
+          <s:element name="FechaOpera" type="s:dateTime" />
+          <s:element name="Funcion" type="s:int" />
+          <s:element name="Modulo" type="s:int" />
+          <s:element name="Paquete" type="s:int" />
+          <s:element name="Sistema" type="s:int" />
+          <s:element name="SubSistema" type="s:int" />
+          <s:element name="Uact" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtPersonaPorDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ObtPersonaPorDocumentoResult" nillable="true" type="s0:ResultObtPersonaPorDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultObtPersonaPorDocumento">
+        <s:sequence>
+          <s:element name="ColErrorNegocio" nillable="true" type="s0:ArrayOfErrorNegocio" />
+          <s:element name="PersonaCons" nillable="true" type="s0:PersonaCons" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfErrorNegocio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorNegocio" nillable="true" type="s0:ErrorNegocio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorNegocio">
+        <s:sequence>
+          <s:element name="Codigo" nillable="true" type="s:string" />
+          <s:element name="Descripcion" nillable="true" type="s:string" />
+          <s:element name="Severidad" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonaCons">
+        <s:sequence>
+          <s:element name="Apellido1" nillable="true" type="s:string" />
+          <s:element name="Apellido2" nillable="true" type="s:string" />
+          <s:element name="Autogenerado" nillable="true" type="s:string" />
+          <s:element name="CodNacionalidad" nillable="true" type="s:int" />
+          <s:element name="CodSexo" nillable="true" type="s:int" />
+          <s:element name="DocumentoCons" nillable="true" type="s0:DocumentoCons" />
+          <s:element name="FallecimientoCons" nillable="true" type="s0:FallecimientoCons" />
+          <s:element name="FechaAlta" nillable="true" type="s:dateTime" />
+          <s:element name="FechaNacimiento" nillable="true" type="s:dateTime" />
+          <s:element name="NacionalidadDesc" nillable="true" type="s:string" />
+          <s:element name="Nombre1" nillable="true" type="s:string" />
+          <s:element name="Nombre2" nillable="true" type="s:string" />
+          <s:element name="NumeroCC" nillable="true" type="s:int" />
+          <s:element name="Observaciones" nillable="true" type="s:string" />
+          <s:element name="OpRegimenCons" nillable="true" type="s0:OpcionRegimenCons" />
+          <s:element name="SerieCC" nillable="true" type="s:string" />
+          <s:element name="SexoDesc" nillable="true" type="s:string" />
+          <s:element name="SistemaDesc" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentoCons">
+        <s:sequence>
+          <s:element name="CodPaisEmisor" nillable="true" type="s:int" />
+          <s:element name="CodTipoDocDesc" nillable="true" type="s:string" />
+          <s:element name="CodTipoDocumento" nillable="true" type="s:string" />
+          <s:element name="NroDocumento" nillable="true" type="s:string" />
+          <s:element name="PaisEmisorDesc" nillable="true" type="s:string" />
+          <s:element name="PersIdentificador" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OpcionRegimenCons">
+        <s:sequence>
+          <s:element name="CodOpcionRegimen" nillable="true" type="s:int" />
+          <s:element name="CodOpcionRegimenDesc" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FallecimientoCons">
+        <s:sequence>
+          <s:element name="Acta" nillable="true" type="s:int" />
+          <s:element name="CausalFallecimientoDesc" nillable="true" type="s:string" />
+          <s:element name="CodCausalFallecimiento" nillable="true" type="s:int" />
+          <s:element name="CodPaisFallecimiento" nillable="true" type="s:int" />
+          <s:element name="DepOfJuridica" nillable="true" type="s:string" />
+          <s:element name="FechaComunicacion" type="s:dateTime" />
+          <s:element name="FechaFallecimiento" type="s:dateTime" />
+          <s:element name="OfJuridica" nillable="true" type="s:int" />
+          <s:element name="PaisFallecDesc" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtPersonaPorDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtPersonaPorDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ObtPersonaPorDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtPersonaPorDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svc_Rcor_Personas">
+    <wsdl:operation name="ObtPersonaPorDocumento">
+      <wsdl:input message="tns:ObtPersonaPorDocumentoSoapIn" />
+      <wsdl:output message="tns:ObtPersonaPorDocumentoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_svc_Rcor_Personas" type="tns:svc_Rcor_Personas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtPersonaPorDocumento">
+      <soap:operation soapAction="ObtPersonaPorDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port name="BasicHttpBinding_svc_Rcor_Personas" binding="tns:BasicHttpBinding_svc_Rcor_Personas">
+      <soap:address location="http://localhost:8001/RCOR/Personas" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
